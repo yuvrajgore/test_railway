@@ -11,11 +11,11 @@ public class UserServiceImpl {
     @Autowired
     private UserRepo userRepo;
 
-    public User addUser(User user) {
+    public User_info addUser(User_info user) {
         return userRepo.save(user);
     }
 
-    public List<User> getAll() {
+    public List<User_info> getAll() {
         return userRepo.findAll();
     }
 }

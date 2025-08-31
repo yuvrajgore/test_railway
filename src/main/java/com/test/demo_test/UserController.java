@@ -13,11 +13,11 @@ public class UserController {
     @Autowired
     private UserServiceImpl userService;
     @GetMapping("/all")
-    public ResponseEntity<List<User>> getAllUser() {
+    public ResponseEntity<List<User_info>> getAllUser() {
         return ResponseEntity.ok(userService.getAll());
     }
     @PostMapping
-    public ResponseEntity<User> saveUser(@RequestBody User user) {
+    public ResponseEntity<User_info> saveUser(@RequestBody User_info user) {
         return ResponseEntity.ok(userService.addUser(user));
     }
 
